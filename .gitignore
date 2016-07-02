@@ -1,0 +1,9 @@
+Thumbs.db
+*.DS_Store
+*.swp
+*.ucf-dist
+.~lock.*
+
+npm-debug.log
+node_modules
+*.gz
