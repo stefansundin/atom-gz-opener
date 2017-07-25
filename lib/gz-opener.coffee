@@ -2,6 +2,7 @@ Serializable = require 'serializable'
 {Emitter, File} = require 'atom'
 path = require 'path'
 fs = require 'fs-plus'
+openFile = require './openfile'
 
 module.exports=
 class GzOpener extends Serializable
@@ -9,6 +10,13 @@ class GzOpener extends Serializable
     atom.workspace.addOpener (filePath='') ->
       if filePath.endsWith(".gz") and !filePath.endsWith(".tar.gz") and fs.isFileSync(filePath)
         new GzOpener(path: filePath)
+        
+    atom.commands.add 'atom-workspace',
+      'gz-opener:decode': ->
+          editor = atom.workspace.getActiveTextEditor()
+          if (editor?)
+            openFile(editor.getPath())
+
 
   constructor: ({path}) ->
     @file = new File(path)
