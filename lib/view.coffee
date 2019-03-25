@@ -13,4 +13,3 @@ module.exports = class GzOpenerView extends View
     @file = editor.getPath()
     @btn.on 'click', =>
       openFile(@file)
-

@@ -4,6 +4,6 @@ This package lets you easily extract .gz files and then open the extracted file 
 
 The package will not attempt to open .tar.gz files, as that would interfere with the [archive-view](https://github.com/atom/archive-view) package.
 
-You can also force opening a file as gz by using `cmd-g cmd-d`.
+You can also gzip-decompress a file by using `cmd-g cmd-d`, or by searching for `Gz Opener: Decompress` in the command palette.
 
 ![](https://raw.githubusercontent.com/stefansundin/atom-gz-opener/media/demo.gif)

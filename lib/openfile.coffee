@@ -1,10 +1,7 @@
-
 archive = require 'ls-archive'
 fs = require 'fs-plus'
 path = require 'path'
 temp = require 'temp'
-
-String::endsWith   ?= (s) -> s == '' or @slice(-s.length) == s
 
 logError = (message, error) ->
   console.error(message, error.stack ? error)
